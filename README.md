@@ -1,4 +1,6 @@
 # Battleships in Blazor
+**Site Link**
+- https://randomworkings.github.io/Battleships-Web-App
 
 **Main Developer(s):**
 - Liz Larkman (Random Workings), https://github.com/RandomWorkings
