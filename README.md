@@ -1,7 +1,7 @@
 # Random Workings Blazor Battleships
 
 **Project Link(s):**
-- https://randomworkings.github.io/PROJECT
+- https://randomworkings.github.io/BlazorBattleships/
 
 **Main Developer(s):**
 - Liz Larkman (Random Workings), https://github.com/RandomWorkings
