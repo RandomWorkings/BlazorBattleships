@@ -19,7 +19,7 @@ jobs:
         dotnet-version: 6.0.x
 
     - name: Publish Blazor .Net App
-      run: dotnet publish -c Release -o release --nologo     
+      run: dotnet publish -c Release -o release --nologo
       
     - name: copy index.html to 404.html
       run: cp release/wwwroot/index.html release/wwwroot/404.html
@@ -31,6 +31,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4.3.4
       with:
         branch: release
-        folder: src/wwwroot
+        folder: release/src/wwwroot
         clean: true
         single-commit: true
