@@ -20,7 +20,7 @@ jobs:
       run: dotnet restore
 
     - name: Publish .NET App
-      run: dotnet publish RandomWorkings.Battleships.csproj --configuration Release --output build --nologo
+      run: dotnet publish --configuration Release --output build --nologo
 
     - name: Deploy to Github Pages
       uses: JamesIves/github-pages-deploy-action@v4.3.4
