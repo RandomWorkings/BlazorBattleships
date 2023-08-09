@@ -7,15 +7,6 @@ on:
 
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   deploy-to-github-pages:
     runs-on: ubuntu-latest
@@ -43,7 +34,6 @@ jobs:
     - name: Deploy GitHub Pages Branch
       uses: JamesIves/github-pages-deploy-action@v4.3.4
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
         branch: release
         folder: .
         clean: false
