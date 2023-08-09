@@ -1,6 +1,4 @@
-# Battleships in Blazor
-**Site Link**
-- https://randomworkings.github.io/Battleships-Web-App
+# Random Workings Blazor Battleships
 
 **Main Developer(s):**
 - Liz Larkman (Random Workings), https://github.com/RandomWorkings
@@ -13,5 +11,10 @@
 - Building proficency in Blazor, C#, .Net, Visual Studio
 
 ---
+### Thanks to the following sources of help and information
+- Workflow Setup
+  - https://github.com/actions/checkout/
+  - https://github.com/actions/setup-dotnet/
+  - https://github.com/JamesIves/github-pages-deploy-action/
 
 [(Back to top)](README.md)
