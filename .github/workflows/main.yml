@@ -1,6 +1,5 @@
-name: DeployToGitHubPages
+name: Deploy To GitHub Pages
    
-# Controls when the action will run
 on:
   push:
     branches: [ main ]
@@ -8,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy-to-github-pages:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
