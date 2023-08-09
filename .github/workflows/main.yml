@@ -35,6 +35,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4.3.4
       with:
         branch: release
-        folder: .
+        folder: src/wwwroot
         clean: false
         single-commit: true
