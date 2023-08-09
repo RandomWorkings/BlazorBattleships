@@ -32,5 +32,5 @@ jobs:
       with:
         branch: release
         folder: src/wwwroot
-        clean: false
+        clean: true
         single-commit: true
