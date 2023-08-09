@@ -3,7 +3,7 @@ name: DeployToGitHubPages
 # Controls when the action will run
 on:
   push:
-    branches: [ release ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -11,10 +11,21 @@ jobs:
     steps:
     - uses: actions/checkout@v3.0.2
 
-    - name: Publish App
-      run: dotnet publish RandomWorkings.Battleships.csproj --prefix src/  -c Release -o release --nologo
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
 
-    - name: Commit wwwroot to GitHub Pages
+    - name: Restore .NET Dependencies
+      run: dotnet restore
+
+    - name: Publish .NET App
+      run: dotnet publish RandomWorkings.Battleships.csproj --configuration Release --output build --nologo
+
+    - name: Deploy to Github Pages
       uses: JamesIves/github-pages-deploy-action@v4.3.4
       with:
-        FOLDER: release/src/wwwroot
+        BASE_BRANCH: release
+        BRANCH: gh-pages
+        FOLDER: build/wwwroot
+        SINGLE_COMMIT: true
