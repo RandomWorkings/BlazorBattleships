@@ -22,7 +22,7 @@ jobs:
 
     - name: Publish Blazor .Net App
       run: dotnet publish src/RandomWorkings.BlazorBattleships.csproj -c Release -o release --nologo
-    
+      
     - name: Change base-tag in index.html from / to Project Repository Name
       run: sed -i 's/<base href="\/" \/>/<base href="\/BlazorBattleships\/" \/>/g' release/wwwroot/index.html
       
