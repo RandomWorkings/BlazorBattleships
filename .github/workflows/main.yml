@@ -11,10 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3.0.2
+    # https://github.com/actions/checkout/
+    - uses: actions/checkout@v3.5.3
 
+    # https://github.com/actions/setup-dotnet/
     - name: Setup .NET SDK
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v3.2.0
       with:
         dotnet-version: 6.0.x
 
@@ -30,8 +32,9 @@ jobs:
     - name: Add .nojekyll file
       run: touch release/wwwroot/.nojekyll
 
+    # https://github.com/JamesIves/github-pages-deploy-action/
     - name: Deploy GitHub Pages Branch
-      uses: JamesIves/github-pages-deploy-action@v4.3.4
+      uses: JamesIves/github-pages-deploy-action@v4.4.3
       with:
         branch: release
         folder: release/wwwroot
