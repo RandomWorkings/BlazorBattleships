@@ -19,13 +19,22 @@ jobs:
     - name: Restore .NET Dependencies
       run: dotnet restore
 
-    - name: Publish .NET App
-      run: dotnet publish --configuration Release --output build --nologo
+    - name: Build
+      run: dotnet build --no-restore
 
-    - name: Deploy to Github Pages
-      uses: JamesIves/github-pages-deploy-action@v4.3.4
-      with:
-        BASE_BRANCH: main
-        BRANCH: gh-pages
-        FOLDER: build/wwwroot
-        SINGLE_COMMIT: true
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v2
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
