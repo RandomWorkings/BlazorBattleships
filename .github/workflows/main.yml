@@ -11,8 +11,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3.0.2
 
-    - name: Publish app
-      run: dotnet publish src/RandomWorkings.Battleships.csproj -c Release -o release --nologo
+    - name: Publish App
+      run: dotnet publish RandomWorkings.Battleships.csproj -c Release -o release --nologo
 
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4.3.4
