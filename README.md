@@ -4,7 +4,7 @@
 - https://randomworkings.github.io/BlazorBattleships/
 
 **Main Developer(s):**
-- Liz Larkman (Random Workings), https://github.com/RandomWorkings
+- Liz Larkman, [GitHub](https://github.com/RandomWorkings)
 
 **Project Specifications**
 - ASP.Net 6.0
@@ -16,6 +16,16 @@
 
 ---
 ### Thanks / Accreditations
+
+- General
+  - https://www.w3schools.com/css/default.asp
+  - https://docs.microsoft.com/aspnet/
+  - https://docs.github.com/en/pages
+
+- Game Development
+  - https://github.com/exceptionnotfound/BlazorGames
+    - https://blazorgames.net/
+	- https://exceptionnotfound.net/tetris-in-blazor-webassembly/
 
 - Workflow Setup
   - https://swimburger.net/blog/dotnet/how-to-deploy-aspnet-blazor-webassembly-to-github-pages
